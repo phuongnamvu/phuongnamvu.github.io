@@ -33,7 +33,7 @@
 <button onclick="openMap()">Kiểm Tra Vị trí của Bạn Hiện tại : Trên Google Map </button>
 <script>
 let coords= {};
-JAVA MASTER
+
 navigator.geolocation.getCurrentPosition(function (position) {
 console.log(position.coords)
 coords
@@ -42,7 +42,7 @@ position.coords
 console.log(err)
 })
 function openMap() {
-location.href = "https://www.google.com/maps/@" + coords.latitude + "," + coords.longtitude
+location.href = "https://www.google.com/maps/@" + coords.latitude + "," + coords.longitude
 
 }
 </script>
