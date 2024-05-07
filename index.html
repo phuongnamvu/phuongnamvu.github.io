@@ -61,8 +61,38 @@ location.href = "https://www.google.com/maps/@" + coords.latitude + "," + coords
 
 
 
+<!-- BEGIN Bạn muốn mua gì ? -->
+
+<center>  <h2>BẠN MUỐN MUA GÌ ? </h2> </center>
+<label>First Name:<label>
+     <input id="firstname" type="text">
+     <br>
+<label>Last Name:<label>
+     <input id="lastname" type="text">
+     <br>
+<button id="jsonbtn" >Click to convert input to JSON</button>
+     <p id="jsontext"></p>
 
 
+var firstname = document.getElementById("firstname")
+var lastname = document.getElementById("lastname")
+var jsonBtn = document.getElementById("jsonbtn")
+var jsonText = document.getElementById("jsontext")
+
+
+
+jsonBtn.addEventListener("click", function(){
+    var data = {
+        "firstName":firstname.value,
+        "lastName":lastname.value
+    }
+    jsonText.innerHTML = JSON.stringify(data)
+})
+
+
+
+<!--  END : Bạn muốn mua gì ?  -->
+  
 
 
 <a href="https://chat.zalo.me/?phone=SĐT_Của_Bạn" id="linkzalo" target="_blank" rel="noopener noreferrer"><div id="fcta-zalo-tracking" class="fcta-zalo-mess">
