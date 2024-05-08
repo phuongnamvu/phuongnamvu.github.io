@@ -150,6 +150,15 @@ getUsers().then(data => {
     `;
   });
 
+  table += `
+    </tbody>
+  </table>
+  `;
+
+  const container = document.getElementById('container');
+  container.innerHTML = table;
+});
+
   </script>
 
 <!--   END :  -->
