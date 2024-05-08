@@ -95,6 +95,62 @@ jsonBtn.addEventListener("click", function(){
 
 
 <!--  END : Bạn muốn mua gì ?  -->
+
+
+<!--   BEGIN : HIỂN THI KHACH HANG  -->
+
+async function getUsers() {
+  try {
+    const response = await fetch(
+      'https://github.com/phuongnamvu/phuongnamvu.github.io/blob/main/Shop.json',
+      {
+        method: 'GET',
+      },
+    );
+
+    if (!response.ok) {
+      throw new Error(`Error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getUsers().then(data => {
+  console.log(data);
+
+  let table = '<table style="border-collapse: collapse;">';
+
+  table += `
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Company</th>
+        <th>City</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+
+    <tbody>
+  `;
+
+  data.forEach(user => {
+    table += `
+      <tr>
+        <td>${user.name}</td>
+        <td>${user.company.name}</td>
+        <td>${user.address.city}</td>
+        <td>${user.email}</td>
+      </tr>
+    `;
+  });
+
+
+<!--   END :  -->
   
 
 
