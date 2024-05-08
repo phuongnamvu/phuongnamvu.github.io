@@ -142,10 +142,10 @@ getUsers().then(data => {
   data.forEach(user => {
     table += `
       <tr>
-        <td>${user.name}</td>
-        <td>${user.company.name}</td>
-        <td>${user.address.city}</td>
-        <td>${user.email}</td>
+        <td>${user.Mua}</td>
+        <td>${user.SanPham}</td>
+        // <td>${user.address.city}</td>
+        // <td>${user.email}</td>
       </tr>
     `;
   });
