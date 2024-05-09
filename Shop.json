@@ -1,1 +1,7 @@
-{"Mua":"John", "SanPham":"30", "Fone":"0908084414"}
+
+
+{
+    "Mua": "Apple",
+    "SanPham": "Large",
+    "color": "Red"
+}
